@@ -1,10 +1,9 @@
 import React from 'react'
 import './styles/itemCart.css'
 import { useDispatch } from 'react-redux'
-import { deleteProductThunk } from '../../store/slices/cart.slice'
+import { deleteProductThunk, updateProductThunk } from '../../store/slices/cart.slice'
 
-const ItemCart = ({prod}) => {
-
+const ItemCart = ({ prod }) => {
   const dispatch = useDispatch()
 
   const handleDelete = () => {
@@ -17,7 +16,6 @@ const ItemCart = ({prod}) => {
         "quantity": prod.quantity - 1,
       }))
     }
-    
   }
 
   const handlePlus = () => {

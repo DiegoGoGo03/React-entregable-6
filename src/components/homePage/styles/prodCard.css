@@ -1,12 +1,19 @@
 .prodcard {
     width: 250px;
     border: 1px solid;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: border-color 0.3s, transform 0.3s;
 }
-
+  
+.prodcard:hover {
+    border-width: 5px;
+    border-color: rgb(255, 143, 0);
+    transform: scale(1.03);
+}
+  
 .prodcard__img {
     cursor: pointer;
     position: relative;
@@ -16,56 +23,70 @@
     justify-content: center;
     align-items: center;
 }
-
+  
 .prodcard__img img:first-child {
     opacity: 1;
     transition: opacity 0.43s;
 }
-
+  
 .prodcard__img:hover img:first-child {
     opacity: 0;
     transition: opacity 0.43s;
 }
-
+  
 .prodcard__img img:last-child {
     position: absolute;
     padding: 10px;
     opacity: 0;
     transition: opacity 0.43s;
 }
-
+  
 .prodcard__img:hover img:last-child {
     opacity: 1;
     transition: opacity 0.43s;
 }
-
+  
 .prodcard__div {
     width: 100%;
 }
-
+  
 .prodcard__list {
     padding: 11px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
 }
-
+  
 .prodcard__item {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;
 }
-
+  
 .prodcard__item span:first-child {
     color: rgb(113, 113, 113);
 }
-
+  
 .prodcard__item span:last-child {
     padding: 20px;
 }
-
+  
 .prodcard__buttons {
     padding-bottom: 20px;
     display: flex;
     gap: 20px;
 }
+  
+.prodcard__buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+  
+.prodcard__buttons button:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 143, 0);
+}
+  

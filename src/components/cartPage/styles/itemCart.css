@@ -1,25 +1,82 @@
 .itemcart {
     width: 250px;
-    border: 1px solid;
+    border: 1px solid #ccc;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr 1fr;
-    place-items: center;
-}
-
-.itemcart__title {
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .itemcart:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  .itemcart__title {
     grid-column: span 3;
-}
-
-.itemcart__buttons {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .itemcart__img {
+    grid-column: span 3;
+  }
+  
+  .itemcart__buttons {
     display: flex;
-}
-
-.itemcart__buttons > span {
-    padding: 0 10px;
-}
-
-.itemcart__total {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .itemcart__buttons > button {
+    padding: 10px 15px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .itemcart__buttons > button:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+  }
+  
+  .itemcart__buttons > span {
+    font-size: 1.2em;
+  }
+  
+  .itemcart__btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .itemcart__btn:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    background-color: #c82333; /* Color más oscuro al pasar el cursor */
+  }
+  
+  .itemcart__total {
     grid-column: span 3;
-}
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  .itemcart__total span {
+    font-weight: bold;
+  }

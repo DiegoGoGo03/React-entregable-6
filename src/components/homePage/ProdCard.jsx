@@ -37,7 +37,7 @@ const ProdCard = ({prod}) => {
                 Detail
             </button>
             <button onClick={handleAddCart}> 
-                Add to car
+                Add to cart
             </button>
         </div>
     </article>

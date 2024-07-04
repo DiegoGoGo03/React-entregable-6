@@ -2,12 +2,14 @@
     padding: 0 20px;
     position: fixed;
     z-index: 10;
-    background-color: orange;
+    background-color: rgb(56, 56, 56);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    top: 0; 
+    height: 60px;
 }
 
 .navbar__list {

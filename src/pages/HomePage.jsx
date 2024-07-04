@@ -49,7 +49,7 @@ const HomePage = () => {
 
   return (
     <div className='homepage'>
-      <div className={`homepage__filters ${menu && 'active'}`}> 
+      <div className={`homepage__filters ${menu ? 'active' : ''}`}> 
         <button onClick={handleMenu}>✖️</button>
         <FilterPrice
           setInputPrice={setInputPrice}
@@ -60,10 +60,10 @@ const HomePage = () => {
         <button onClick={handleMode}>Change mode</button>
       </div>
       <div className='homepage__search'>
-        <input ref={textInput} onChange={handleChange} type="text" />
+        <input ref={textInput} onChange={handleChange} type="text" placeholder="What are you looking for?"/>
         <button>🔍</button>
       </div>
-      <button className={menu && 'active'} onClick={handleMenu}>Menu</button>
+      <button className={menu ? 'active' : ''} onClick={handleMenu}>Menu</button>
       <div className='homepage__container'>
         {
           products?.filter(cbFilter).map((prod) => (

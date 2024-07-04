@@ -54,13 +54,12 @@ export const deleteProductThunk = (id) => (dispatch) => {
         .catch(err => console.log(err))
 }
 
-export const updateProductThink = (id, data) => (dispatch) => {
+export const updateProductThunk = (id, data) => (dispatch) => {
     const url = `${urlBase}/cart/${id}`
     axios.put(url, data, bearerToken())
         .then(res => {
             dispatch(updCart(res.data))
             console.log(res.data)
-
         })
         .catch(err => console.log(err))
 }
