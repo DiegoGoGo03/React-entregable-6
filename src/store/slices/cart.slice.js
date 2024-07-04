@@ -26,7 +26,7 @@ export default cart.reducer
 
 export const getCartProdsThunk = () => (dispatch) => {
     const url = `${urlBase}/cart`
-    axios.get(url, bearerToken)
+    axios.get(url, bearerToken())
         .then(res => {
             dispatch(setCart(res.data))
             console.log(res.data)

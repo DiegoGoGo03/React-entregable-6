@@ -1,14 +1,15 @@
-
-
 const bearerToken = () => {
-  const token = localStorage.getItem('token')
+  const token = localStorage.getItem('token');
 
-  return {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-    
+  if (token) {
+    return {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    };
+  } else {
+    return {};
   }
-}
+};
 
-export default bearerToken
+export default bearerToken;
